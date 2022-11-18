@@ -4,12 +4,11 @@ def multiMatriz(m1,m2):
         m3.append([])
         for j in range(len(m2[0])):
             m3[i].append(0)
-    #print(m3)
     for r in range(len(m1)):
         for c in range(len(m2[0])):
-            for k in range(0, m2):
+            for k in range(0, len(m2)):
                 print(r,c,"+=",r,k ,"*",k,c)
-                m3[r, c] += m1[r, k]*m2[k, c]
+                m3[r][c] += (m1[r][k]*m2[k][c])
     return m3
 # -----------------------------
 
